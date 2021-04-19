@@ -11,7 +11,7 @@ const createNews = async (req, res) => {
     news.create(req.body, id, imageName); // http://localhost:3000/image-name
     res.json({ success: true, message: 'Article créé avec succès !' });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'Une erreur est survenue sur le serveur !',
     });
@@ -24,7 +24,7 @@ const getAllNews = async (req, res) => {
     const data = await news.getAll();
     res.json({ success: true, news: data });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'Une erreur est survenue sur le serveur !',
     });
@@ -36,7 +36,7 @@ const getSingleNews = async (req, res) => {
   try {
     const data = await news.getSingle(req.params.id);
     if (!data) {
-      return res.json({
+      return res.status(404).json({
         success: false,
         message: 'Article non trouvé !',
       });
@@ -47,7 +47,7 @@ const getSingleNews = async (req, res) => {
       news: data,
     });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'Une erreur est survenue sur le serveur !',
     });
@@ -60,7 +60,7 @@ const getNewsByCategory = async (req, res) => {
     const { category, qty } = req.params;
     const data = await news.getByCategory(category);
     if (!data) {
-      return res.json({ success: false, message: 'Articles non trouvés !' });
+      return res.status(404).json({ success: false, message: 'Articles non trouvés !' });
     }
 
     if (qty) {
@@ -69,7 +69,7 @@ const getNewsByCategory = async (req, res) => {
 
     res.json({ success: true, news: data });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'Une erreur est survenue sur le serveur !',
     });
@@ -83,13 +83,13 @@ const searchPosts = async (req, res) => {
     if (query.trim()) {
       const response = await news.searchPosts(req.params.query);
       if (response.length === 0)
-        return res.json({ success: false, message: 'Aucun résultat trouvé' });
+        return res.status(404).json({ success: false, message: 'Aucun résultat trouvé' });
       res.json({ success: true, news: response });
     }
 
-    res.json({ success: false, message: 'Aucun résultat trouvé' });
+    res.status(404).json({ success: false, message: 'Aucun résultat trouvé' });
   } catch (error) {
-    res.json({
+    res.status(500).json({
       success: false,
       message: 'Une erreur est survenue sur le serveur !',
     });
