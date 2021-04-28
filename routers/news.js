@@ -11,7 +11,7 @@ const {
 const { validator, result, validateFile } = require('../middleware/validator');
 
 router.post(
-  '/create',
+  '/createNews',
   uploads.single('thumbnail'),
   validator,
   result,
@@ -20,7 +20,7 @@ router.post(
 );
 
 router.get('/news', getAllNews);
-router.get('/news/single/:id', getSingleNews);
+router.get('/news/:id', getSingleNews);
 router.get('/news/:category/:qty?', getNewsByCategory);
 router.post('/news/search/:query', searchPosts);
 

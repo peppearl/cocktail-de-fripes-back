@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const newsRouter = require('./routers/news');
+const thriftRouter = require('./routers/thrift');
 
 app.use(express.static('public'));
 app.use(express.static('data/uploads'));
 app.use('/api', newsRouter);
+app.use('/api', thriftRouter);
 
 const PORT = process.env.PORT || 3000;
 

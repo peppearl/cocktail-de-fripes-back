@@ -41,13 +41,10 @@ textarea {
 .input:focus {
   outline: none;
 }
-.label {
-  position: absolute;
-  top: 13px;
-  left: 10px;
-  transition: 0.3s ease;
+sup {
+  color: red;
 }
-#title {
+.inputText {
   height: 45px;
   font-size: 22px;
   padding: 0 10px;

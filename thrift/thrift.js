@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-class News {
-  constructor(filename = 'news.json') {
+class Thrifts {
+  constructor(filename = 'thrift.json') {
     this.path = `./data/${filename}`;
 
     try {
@@ -24,7 +24,7 @@ class News {
   async create(data, id, imageName) {
     const totalData = JSON.parse(await fs.promises.readFile(this.path));
     const { content } = data;
-    const desc = content.substr(0, 100) + '...';
+    const desc = content.substr(0, 200) + '...';
     totalData.push({
       ...data,
       id,
@@ -37,29 +37,34 @@ class News {
 
   async getAll() {
     const data = JSON.parse(await fs.promises.readFile(this.path));
-    return data.filter(news => delete news.content);
+    return data.filter(thrift => delete thrift.content);
   }
 
-  async searchPosts(query) {
+  async searchThriftStore(query) {
     try {
       const data = await this.getAll();
-      return data.filter(news =>
-        news.title.toLowerCase().includes(query.toLowerCase())
+      return data.filter(thrift =>
+        thrift.name.toLowerCase().includes(query.toLowerCase())
       );
     } catch (error) {
-      console.log('Une erreur est survenue lors de la recherche de l\'article.');
+      console.log('Une erreur est survenue lors de la recherche de la friperie.');
     }
   }
 
   async getSingle(id) {
     const data = await JSON.parse(await fs.promises.readFile(this.path));
-    return data.find(news => news.id === id);
+    return data.find(thrift => thrift.id === id);
   }
 
-  async getByCategory(category) {
+  async getByCity(city) {
     const data = await this.getAll();
-    return data.filter(news => news.category === category);
+    return data.filter(thrift => thrift.city === city);
+  }
+
+  async getByStyle(style) {
+    const data = await this.getAll();
+    return data.filter(thrift => thrift.style === style);
   }
 }
 
-module.exports = News;
+module.exports = Thrifts;

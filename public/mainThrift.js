@@ -13,21 +13,25 @@ const displayMessage = (text, color) => {
 };
 
 const validateForm = () => {
-  const title = select('#title').value.trim();
+  const name = select('#name').value.trim();
   const content = select('#content').value.trim();
   const thumbnail = select('#thumbnail').value;
-  const category = select('#category').value;
+  const city = select('#city').value.trim();
+  const style = select('#style').value;
+  const address = select('#address').value.trim();
+  const hours = select('#hours').value.trim();
+  const tel = select('#tel').value.trim();
 
   const exceptedImageFiles = ['jpg', 'jpeg', 'png'];
 
-  if (!title || !content || !thumbnail || category == '0') {
+  if (!name || !content || !thumbnail || !city || style == '0' || !address || !hours || !tel) {
     // show  some error
-    return displayMessage('Field can not be empty', 'red');
+    return displayMessage('Le champ ne peut être vide', 'red');
   }
 
   const extension = thumbnail.split('.').pop();
   if (!exceptedImageFiles.includes(extension)) {
-    return displayMessage('Image file is not valid', 'red');
+    return displayMessage('Le fichier Image n\'est pas valide', 'red');
   }
 
   return true;
@@ -47,15 +51,18 @@ form.addEventListener('submit', async (e) => {
 });
 
 const resetForm = () => {
-  select('#title').value = '';
+  select('#name').value = '';
   select('#content').value = '';
   select('#thumbnail').value = null;
-  select('#category').value = '0';
-  select('#featured-content').checked = false;
+  select('#city').value = '';
+  select('#style').value = '0';
+  select('#hours').value = '';
+  select('#address').value = '';
+  select('#tel').value = '';
 };
 
 const postData = async (data) => {
-  const result = await fetch('/api/createNews', {
+  const result = await fetch('/api/createThrift', {
     method: 'POST',
     body: data,
   });

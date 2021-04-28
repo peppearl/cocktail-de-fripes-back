@@ -1,56 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <title>News Dashboard</title>
-  </head>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="main.css"/>
+    <title>Création d'articles</title>
+</head>
 
-  <body>
-    <div class="form-container">
-      <h1 class="heading">Post Your News</h1>
+<body>
+<div class="form-container">
+    <h1 class="heading">Créer un article ;)</h1>
 
-      <p class="message">Error</p>
-      <form class="form" enctype="multipart/form-data">
+    <a href="createThrift.html">
+        <button class="btn">Créer une friperie</button>
+    </a>
+
+    <p class="message">Erreur</p>
+    <form class="form" enctype="multipart/form-data">
         <div class="input-container">
-          <input type="text" name="title" id="title" class="input" />
-          <label class="label" for="title">Title <sup>*</sup></label>
+            <label class="label" for="title">Titre <sup>*</sup></label>
+            <input type="text" name="title" id="title" class="input inputText"/>
         </div>
         <div class="input-container">
-          <textarea
-            name="content"
-            id="content"
-            cols="30"
-            rows="10"
-            class="input"
+            <label class="label" for="content">Contenu de l'article <sup>*</sup></label>
+            <textarea
+                  name="content"
+                  id="content"
+                  cols="30"
+                  rows="10"
+                  class="input"
           ></textarea>
-          <label class="label" for="content">Content <sup>*</sup></label>
         </div>
         <div class="input-container">
-          <label for="thumbnail">Thumbnail <sup>*</sup></label>
-          <input type="file" name="thumbnail" id="thumbnail" />
+            <label for="thumbnail">Photo mise en avant <sup>*</sup></label>
+            <input type="file" name="thumbnail" id="thumbnail"/>
         </div>
         <div class="input-container">
-          <select name="category" id="category">
-            <option value="0">Category <sup>*</sup></option>
-            <option value="breaking-news">Breaking News</option>
-            <option value="tech">Tech</option>
-            <option value="political">Political</option>
-            <option value="entertainment">Entertainment</option>
-          </select>
+            <label for="category">Catégorie <sup>*</sup></label>
+            <select name="category" id="category">
+                <option value="0">Catégorie</option>
+                <option value="breaking-news">Breaking News</option>
+                <option value="tech">Tech</option>
+                <option value="political">Political</option>
+                <option value="entertainment">Entertainment</option>
+            </select>
         </div>
         <div class="input-container featured-container">
-          <input type="checkbox" name="featured" id="featured-content" />
-          <label for="featured-content">Featured Content</label>
+            <input type="checkbox" name="featured" id="featured-content"/>
+            <label for="featured-content">Article mise en avant</label>
         </div>
         <div class="input-container">
-          <input type="submit" value="SUBMIT" class="btn" />
+            <input type="submit" value="VALIDER" class="btn"/>
         </div>
-      </form>
-      <div class="test"></div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+    </form>
+    <div class="test"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
+</body>
 </html>
