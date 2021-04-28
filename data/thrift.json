@@ -1,14 +1,16 @@
 [
   {
     "name": "Lilou Vintage",
-    "content": "Véritable caverne d'Ali Baba pour la cité phocéenne, ce lieu regorge de vêtements, chaussures et accessoires tout droit sortis du cinéma. Petites vestes des 50's, lunettes des 60's, foulards des 70's.\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
+    "content": "Véritable caverne d'Ali Baba pour la cité phocéenne, ce lieu regorge de vêtements, chaussures et accessoires tout droit sortis du cinéma. Petites vestes des 50's, lunettes des 60's, foulards des 70's.\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n\r\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature.",
     "city": "Marseille",
     "address": "1 bis Rue Pastoret 13006 Marseille",
     "hours": "Ouvert du mardi au samedi de 11h00 à 19h",
+    "instagram": "",
+    "facebook": "https://www.facebook.com/LILOU-VINTAGE-113818315314824/",
     "tel": "000626194971",
     "style": "vintage",
-    "id": "1619607235847",
+    "id": "1619615092523",
     "desc": "Véritable caverne d'Ali Baba pour la cité phocéenne, ce lieu regorge de vêtements, chaussures et accessoires tout droit sortis du cinéma. Petites vestes des 50's, lunettes des 60's, foulards des 70's....",
-    "thumbnail": "http://172.30.92.132:3000/1619607235847-lilou-vintage.png"
+    "thumbnail": "http://172.30.92.132:3000/1619615092523-lilou-vintage.png"
   }
 ]

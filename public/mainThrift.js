@@ -21,6 +21,8 @@ const validateForm = () => {
   const address = select('#address').value.trim();
   const hours = select('#hours').value.trim();
   const tel = select('#tel').value.trim();
+  const instagram = select('#instagram').value.trim();
+  const facebook = select('#facebook').value.trim();
 
   const exceptedImageFiles = ['jpg', 'jpeg', 'png'];
 
@@ -59,6 +61,8 @@ const resetForm = () => {
   select('#hours').value = '';
   select('#address').value = '';
   select('#tel').value = '';
+  select('#instagram').value = null;
+  select('#facebook').value = null;
 };
 
 const postData = async (data) => {
