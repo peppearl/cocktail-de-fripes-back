@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const uploads = require('../middleware/multer');
+const upload = require('../middleware/multer');
 const {
   createThrift,
   getAllThrifts,
@@ -13,7 +13,7 @@ const { validator, result, validateFile } = require('../middleware/validatorThri
 
 router.post(
     '/createThrift',
-    uploads.single('thumbnail'),
+    upload.single('thumbnail'),
     validator,
     result,
     validateFile,
@@ -21,7 +21,7 @@ router.post(
 ); //working
 
 router.get('/thrift', getAllThrifts); //working : http://localhost:3000/api/thrift
-router.get('/thrift/:id', getSingleThrift); //working : http://localhost:3000/api/thrift/1619607235847
+router.get('/thrift/single/:id', getSingleThrift); //working : http://localhost:3000/api/thrift/single/1619607235847
 router.get('/thriftCity/:city/:qty?', getThriftByCity); //working : http://localhost:3000/api/thriftCity/Marseille/5
 router.get('/thriftStyle/:style/:qty?', getThriftByStyle); //working : http://localhost:3000/api/thriftStyle/vintage/5
 router.post('/thrift/search/:query', searchThriftStore); //working : http://localhost:3000/api/thrift/search/lilou

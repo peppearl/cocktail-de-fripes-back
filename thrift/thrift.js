@@ -29,7 +29,7 @@ class Thrifts {
       ...data,
       id,
       desc,
-      thumbnail: `http://172.30.92.132:3000/${imageName}`,
+      thumbnail: `http://172.30.92.134:3000/${imageName}`,
     });
 
     await fs.promises.writeFile(this.path, JSON.stringify(totalData, null, 2));

@@ -5,10 +5,11 @@ const news = new News();
 
 const createNews = async (req, res) => {
   const id = news.createId();
+  const date = news.createDate();
 
   try {
     const imageName = await imageProcess(req, id);
-    news.create(req.body, id, imageName); // http://localhost:3000/image-name
+    news.create(req.body, id, imageName, date); // http://localhost:3000/image-name
     res.json({ success: true, message: 'Article créé avec succès !' });
   } catch (error) {
     res.status(500).json({

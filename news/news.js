@@ -21,7 +21,12 @@ class News {
     return new Date().getTime().toString();
   }
 
-  async create(data, id, imageName) {
+  createDate() {
+    let today = new Date();
+    return today.toLocaleDateString('fr-FR');
+  }
+
+  async create(data, id, imageName, date) {
     const totalData = JSON.parse(await fs.promises.readFile(this.path));
     const { content } = data;
     const desc = content.substr(0, 100) + '...';
@@ -29,7 +34,8 @@ class News {
       ...data,
       id,
       desc,
-      thumbnail: `http://172.30.92.132:3000/${imageName}`,
+      thumbnail: `http://172.30.92.134:3000/${imageName}`,
+      date
     });
 
     await fs.promises.writeFile(this.path, JSON.stringify(totalData, null, 2));
@@ -44,7 +50,7 @@ class News {
     try {
       const data = await this.getAll();
       return data.filter(news =>
-        news.title.toLowerCase().includes(query.toLowerCase())
+          news.title.toLowerCase().includes(query.toLowerCase())
       );
     } catch (error) {
       console.log('Une erreur est survenue lors de la recherche de l\'article.');
