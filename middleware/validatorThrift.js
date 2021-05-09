@@ -1,12 +1,12 @@
 const {check, validationResult} = require('express-validator');
 
 const exceptedStyle = [
-    'vintage',
-    'streetwear',
-    'original',
-    'élégant',
-    'décontracté',
-    'underground'
+    'Vintage',
+    'Streetwear',
+    'Original',
+    'Elégant',
+    'Décontracté',
+    'Underground'
 ];
 
 const validator = [
