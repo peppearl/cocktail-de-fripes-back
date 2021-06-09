@@ -1,10 +1,10 @@
 const { check, validationResult } = require('express-validator');
 
 const exceptedCategory = [
-  'entertainment',
-  'political',
-  'tech',
-  'breaking-news',
+  'Instant-Culture',
+  'Fripe-Of-The-Week',
+  'Top',
+  'Actualités',
 ];
 
 const validator = [
