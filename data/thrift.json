@@ -11,11 +11,11 @@
     "style": "Vintage",
     "id": "1619615092523",
     "desc": "Véritable caverne d'Ali Baba pour la cité phocéenne, ce lieu regorge de vêtements, chaussures et accessoires tout droit sortis du cinéma. Petites vestes des 50's, lunettes des 60's, foulards des 70's....",
-    "thumbnail": "http://172.30.92.142:3000/1619615092523-lilou-vintage.png",
-    "pic1": "http://172.30.92.142:3000/1619615092523-lilou-vintage1.png",
-    "pic2": "http://172.30.92.142:3000/1619615092523-lilou-vintage2.png",
-    "pic3": "http://172.30.92.142:3000/1619615092523-lilou-vintage3.png",
-    "pic4": "http://172.30.92.142:3000/1619615092523-lilou-vintage4.png"
+    "thumbnail": "http://172.30.92.128:3000/1619615092523-lilou-vintage.png",
+    "pic1": "http://172.30.92.128:3000/1619615092523-lilou-vintage1.png",
+    "pic2": "http://172.30.92.128:3000/1619615092523-lilou-vintage2.png",
+    "pic3": "http://172.30.92.128:3000/1619615092523-lilou-vintage3.png",
+    "pic4": "http://172.30.92.128:3000/1619615092523-lilou-vintage4.png"
   },
   {
     "name": "Bis Boutique Solidaire",
@@ -29,11 +29,11 @@
     "style": "Décontracté",
     "id": "1620498852717",
     "desc": "BIS Boutique Solidaire est une belle boutique qui vend des vêtements de seconde main située en plein cœur du Haut Marais.\r\n\r\nAlors que la vitrine, impeccable, attire l’œil, le design intérieur, modern...",
-    "thumbnail": "http://172.30.92.142:3000/1620498852717-bis-boutique-solidaire.png",
-    "pic1": "http://172.30.92.142:3000/1620498852717-bis-boutique-solidaire1.png",
-    "pic2": "http://172.30.92.142:3000/1620498852717-bis-boutique-solidaire2.png",
-    "pic3": "http://172.30.92.142:3000/1620498852717-bis-boutique-solidaire3.png",
-    "pic4": "http://172.30.92.142:3000/1620498852717-bis-boutique-solidaire4.png"
+    "thumbnail": "http://172.30.92.128:3000/1620498852717-bis-boutique-solidaire.png",
+    "pic1": "http://172.30.92.128:3000/1620498852717-bis-boutique-solidaire1.png",
+    "pic2": "http://172.30.92.128:3000/1620498852717-bis-boutique-solidaire2.png",
+    "pic3": "http://172.30.92.128:3000/1620498852717-bis-boutique-solidaire3.png",
+    "pic4": "http://172.30.92.128:3000/1620498852717-bis-boutique-solidaire4.png"
   },
   {
     "name": "Funny Vintage",
@@ -47,10 +47,10 @@
     "style": "Vintage",
     "id": "1620500774314",
     "desc": "Le Funny Vintage, c’est un peu la boutique qu’on aurait voulu inventer. Difficile à décrire, c’est avant tout un concept improbable : une friperie, une brocante, un café et un disquaire réunis dans le...",
-    "thumbnail": "http://172.30.92.142:3000/1620500774314-funny-vintage.jpg",
-    "pic1": "http://172.30.92.142:3000/1620500774314-funny-vintage1.jpg",
-    "pic2": "http://172.30.92.142:3000/1620500774314-funny-vintage2.jpg",
-    "pic3": "http://172.30.92.142:3000/1620500774314-funny-vintage3.jpg",
-    "pic4": "http://172.30.92.142:3000/1620500774314-funny-vintage4.jpg"
+    "thumbnail": "http://172.30.92.128:3000/1620500774314-funny-vintage.jpg",
+    "pic1": "http://172.30.92.128:3000/1620500774314-funny-vintage1.jpg",
+    "pic2": "http://172.30.92.128:3000/1620500774314-funny-vintage2.jpg",
+    "pic3": "http://172.30.92.128:3000/1620500774314-funny-vintage3.jpg",
+    "pic4": "http://172.30.92.128:3000/1620500774314-funny-vintage4.jpg"
   }
 ]

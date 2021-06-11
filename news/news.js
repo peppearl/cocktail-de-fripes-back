@@ -34,7 +34,7 @@ class News {
       ...data,
       id,
       desc,
-      thumbnail: `http://172.30.92.142:3000/${imageName}`,
+      thumbnail: `http://172.30.92.128:3000/${imageName}`,
       date
     });
 
