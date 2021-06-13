@@ -1,27 +1,25 @@
 const express = require('express');
 const router = express.Router();
-const uploads = require('../middleware/multer');
-const {
-    createNews,
-    getAllNews,
-    getSingleNews,
-    getNewsByCategory,
-    searchPosts,
-} = require('../controllers/news');
-const { validator, result, validateFile } = require('../middleware/validator');
 
-router.post(
-    '/createNews',
-    uploads.single('thumbnail'),
-    validator,
-    result,
-    validateFile,
-    createNews
-);
+const news = require("../controllers/news.controller.js");
 
-router.get('/news', getAllNews);
-router.get('/news/single/:id', getSingleNews);
-router.get('/news/:category/:qty?', getNewsByCategory);
-router.post('/news/search/:query', searchPosts);
+
+// Create a new Article
+router.post("/", news.create); //not working -> req.body === undefined
+
+// Retrieve all Articles
+router.get("/", news.findAll); //working / working with category
+
+// Retrieve a single Article with id
+router.get("/:id", news.findOne); //working
+
+// Update an Article with id
+router.put("/:id", news.update); //not working -> req.body === undefined
+
+// Delete an Article with id
+router.delete("/:id", news.delete); //working
+
+// Delete all Articles
+router.delete("/", news.deleteAll); //working
 
 module.exports = router;
